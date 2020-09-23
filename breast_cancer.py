@@ -5,7 +5,7 @@ import pickle
 
 app=Flask(__name__)
 
-model = pickle.load(open('rfc_model.pickle', 'rb'))
+model = pd.read_pickle('dtc_model.pickle')
 
 @app.route('/')	
 def home():
