@@ -5,7 +5,7 @@ import pickle
 
 app=Flask(__name__)
 
-model = pickle.load(open('gau.pickle', 'rb'))
+model = pickle.load(open('rfc_model.pickle', 'rb'))
 
 @app.route('/')	
 def home():
@@ -28,8 +28,8 @@ def predict():
 		prediction=	model.predict([[mean_radius,mean_texture,mean_perimeter,mean_area,mean_smoothness]])
 		output=prediction[0]
 
-	return render_template('index.html', prediction_cancer=f' answer is {output}')
+	return render_template('home.html', prediction_cancer=f' answer is {output}')
 
 
 if __name__=='__main__':
-	app.run(debug=False)
+	app.run(debug=True)
