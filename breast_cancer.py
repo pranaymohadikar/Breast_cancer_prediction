@@ -16,11 +16,11 @@ def home():
 def predict():
 	
 	if request.method=='POST':
-		mean_radius = float(request.form['mean_radius'])
-		mean_texture = float(request.form['mean_texture'])
-		mean_perimeter = float(request.form['mean_perimeter'])	
-		mean_area = float(request.form['mean_area'])	
-		mean_smoothness = float(request.form['mean_smoothness'])
+		mean_radius = (request.form['mean_radius'])
+		mean_texture = (request.form['mean_texture'])
+		mean_perimeter = (request.form['mean_perimeter'])	
+		mean_area = (request.form['mean_area'])	
+		mean_smoothness = (request.form['mean_smoothness'])
 
 		model=pd.read_pickle('rfc_model.pickle')
 
