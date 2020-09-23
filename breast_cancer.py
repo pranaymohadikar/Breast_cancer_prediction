@@ -1,10 +1,11 @@
 from flask import Flask,render_template,request
 import numpy as np
 import pandas as pd
+import pickle
 
 app=Flask(__name__)
 
-
+model = pickle.load(open('gau.pickle', 'rb'))
 
 @app.route('/')	
 def home():
@@ -22,7 +23,7 @@ def predict():
 		mean_area = (request.form['mean_area'])	
 		mean_smoothness = (request.form['mean_smoothness'])
 
-		model=pd.read_pickle('rfc_model.pickle')
+		
 
 		prediction=	model.predict([[mean_radius,mean_texture,mean_perimeter,mean_area,mean_smoothness]])
 		output=prediction[0]
