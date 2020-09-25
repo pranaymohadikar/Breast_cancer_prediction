@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<form action="{{url_for('predict')}}" method= 'POST'>
-	
+{% extends 'layout.html' %}
+{% block body %}
+
+
+				
+		<!-- Form-->
+		<form action="{{url_for('predict')}}" method= 'POST'>
 		
-	mean_radius : <input type="text" step="any" required name="mean_radius"><br> <br>
-	mean_texture : <input type="text" step="any" required name="mean_texture"><br> <br>
-	mean_perimeter : <input type="text" step="any" required name="mean_perimeter"><br> <br>	
-	mean_area : <input type="text" step="any" required name="mean_area"><br> <br>
-	mean_smoothness : <input type="text" step="any" required name="mean_smoothness"><br> <br>
+			
+			<b>mean_radius :</b> <input type="text" step="any" required name="mean_radius"><br> <br>
+			<b>mean_texture :</b> <input type="text" step="any" required name="mean_texture"><br> <br>
+			<b>mean_perimeter :</b> <input type="text" step="any" required name="mean_perimeter"><br> <br>	
+			<b>mean_area :</b> <input type="text" step="any" required name="mean_area"><br> <br>
+			<b>mean_smoothness :</b> <input type="text" step="any" required name="mean_smoothness"><br> <br>
 
-	<input type="submit" name="" value='submit'>
-	<br>
-	<br>
-	your answer id {{prediction_cancer}}
-
-	</form>
-</body>
-</html>
+			<input type="submit" name="" value='Predict'>
+		</form>
+		
+	{% endblock %}

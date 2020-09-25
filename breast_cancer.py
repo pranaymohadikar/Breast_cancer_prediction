@@ -28,7 +28,7 @@ def predict():
 		prediction=	model.predict([[mean_radius,mean_texture,mean_perimeter,mean_area,mean_smoothness]])
 		output=prediction[0]
 
-	return render_template('home.html', prediction_cancer=f' answer is {output}')
+	return render_template('result.html', prediction_cancer=output)
 
 
 if __name__=='__main__':

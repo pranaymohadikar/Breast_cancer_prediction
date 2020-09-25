@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	your answer id {{prediction_cancer}}
-</body>
-</html>
+{% extends 'layout.html' %}
+{% block body %}
+
+
+				
+					{% if prediction_cancer==0 %}
+						<h1> You dont have Cancer </h1>
+						<img class="gif" width='100' height='100' style='margin-left: auto; margin-right:auto;' src="{{ url_for('static', filename='safe.gif') }}" alt="SPAM Image">
+					{% elif prediction_cancer==1 %}
+						<h1> You have Cancer</h1>
+						<img class="gif" width='100' height='100' style='margin-left: auto; margin-right:auto;'  src="{{ url_for('static', filename='cancer.gif') }}" alt="Not a spam image">
+					{% endif %}
+
+
+{% endblock %}
