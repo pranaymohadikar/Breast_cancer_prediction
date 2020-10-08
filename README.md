@@ -1,4 +1,7 @@
-                                                    # Breast Cancer Prediction
+# Breast Cancer Prediction
+This repository contains all the files related to the Breast cancer predictor web app and if you want to explpore the project you can go to my [Machine Learning Repository](https://github.com/pranaymohadikar/Machine-Learning-Projects-)
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+## Project Overview
 Worldwide, breast cancer is the most common type of cancer in women and the second highest in terms of mortality rates.
 Diagnosis of breast cancer is performed when an abnormal lump is found (from self-examination or x-ray) or a tiny speck of
 calcium is seen (on an x-ray). After a suspicious lump is found, the doctor will conduct a diagnosis to determine whether
